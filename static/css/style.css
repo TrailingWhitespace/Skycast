@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "iceberg";
+  src: url("iceberg.ttf");
+}
+
+@font-face {
+  font-family: "intertight";
+  src: url("intertight.ttf");
+}
+h1 {
+  font-family: "iceberg";
+  margin: 0px;
+  font-size: 75px;
+}
+
+p {
+  margin: 0px;
+  font-family: "intertight";
+  font-size: larger;
+}
+
+.main {
+  height: 45vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search {
+  width: 100vw;
+  height: 55vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input {
+  width: 400px;
+  background-color: #2bc0e4;
+  color: #000000;
+  padding: 0.15rem 0.5rem;
+  min-height: 40px;
+  border-radius: 100px;
+  outline: 0px;
+  border: 0px;
+  line-height: 1.15;
+  box-shadow: 0px 10px 20px -18px;
+}
+
+input:focus {
+  border-bottom: 2px solid #ffffff;
+  border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+  outline: 1px solid black;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 17%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#sbutton {
+  margin-top: 10px;
+  padding: 13px 17px 13px 17px;
+  border-radius: 10px;
+  background: #2bc0e4;
+  border: none;
+  font-family: "intertight";
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#sbutton:hover {
+  box-shadow: 7px 5px 56px -14px #ffffff;
+}
+
+#sbutton:active {
+  transform: scale(0.85);
+  box-shadow: 7px 5px 56px -10px #ffffff;
+}
