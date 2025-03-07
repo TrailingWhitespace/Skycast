@@ -26,7 +26,7 @@ def weather():
         resp = requests.get(base_url, params=params)
         if resp.status_code == 200:
             print(resp.json())
-            return render_template("weather.html")
+            return render_template("weather.html", weather = resp.json())
         else:
             return render_template("weather.html", error = resp.text)
 

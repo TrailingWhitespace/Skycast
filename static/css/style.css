@@ -112,3 +112,85 @@ body {
   text-shadow: 0 0 5px #fff;
   
 }
+
+
+.weather-container {
+  max-width: 500px;
+
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-container h1 {
+  font-family: "intertight";
+}
+
+
+.weather-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.weather-icon img {
+  width: 150px;
+}
+
+.weather-details {
+  text-align: left;
+}
+
+.weather-details p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.w {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  flex-direction: column;
+
+}
+
+.error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin-left: 30%;
+  margin-top: 20%;
+}
+.error h2 {
+  font-family: "intertight";
+}
+
+#sbutton2 {
+  margin-top: 10px;
+  padding: 13px 17px 13px 17px;
+  border-radius: 10px;
+  background: #2bc0e4;
+  border: none;
+  font-family: "intertight";
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#sbutton2:hover {
+  box-shadow: 7px 5px 56px -14px #ffffff;
+}
+
+#sbutton2:active {
+  transform: scale(0.85);
+  box-shadow: 7px 5px 56px -10px #ffffff;
+}
