@@ -14,7 +14,7 @@ def weather():
 
         with open("api_key.txt", "r") as file:
             api_key = file.read()
-            print(api_key)
+
         city = request.form.get("query")
         
         base_url = "https://api.openweathermap.org/data/2.5/weather"
@@ -25,9 +25,11 @@ def weather():
         }
         resp = requests.get(base_url, params=params)
         if resp.status_code == 200:
+            print(resp.json())
             return render_template("weather.html")
         else:
-            return f"Error: {resp.status_code}, {resp.text}"
+            return render_template("weather.html", error = resp.text)
+
 
 
 
