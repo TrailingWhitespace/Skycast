@@ -13,46 +13,44 @@
   </head>
   <body>
     <div class="w">
-
-    {% if weather %}
-    <div class="weather-container">
-      <h1>Weather in {{ weather.name }}, {{ weather.sys.country }}</h1>
-      <div class="weather-box">
-        <div class="weather-icon">
-          <img
-            src="https://openweathermap.org/img/wn/{{ weather.weather[0].icon }}@4x.png"
-            alt="Weather Icon"
-          />
-        </div>
-        <div class="weather-details">
-          <p>
-            <strong>Condition:</strong> {{ weather.weather[0].description |
-            title }}
-          </p>
-          <p>
-            <strong>Temperature:</strong> {{ weather.main.temp }}°C (Feels like
-            {{ weather.main.feels_like }}°C)
-          </p>
-          <p><strong>Humidity:</strong> {{ weather.main.humidity }}%</p>
-          <p>
-            <strong>Wind:</strong> {{ weather.wind.speed }} m/s, Gusts: {{
-            weather.wind.gust }} m/s
-          </p>
-          <p><strong>Pressure:</strong> {{ weather.main.pressure }} hPa</p>
-          <p><strong>Cloudiness:</strong> {{ weather.clouds.all }}%</p>
+      {% if weather %}
+      <div class="weather-container">
+        <h1>Weather in {{ weather.name }}, {{ weather.sys.country }}</h1>
+        <div class="weather-box">
+          <div class="weather-icon">
+            <img
+              src="https://openweathermap.org/img/wn/{{ weather.weather[0].icon }}@4x.png"
+              alt="Weather Icon"
+            />
+          </div>
+          <div class="weather-details">
+            <p>
+              <strong>Condition:</strong> {{ weather.weather[0].description |
+              title }}
+            </p>
+            <p>
+              <strong>Temperature:</strong> {{ weather.main.temp }}°C (Feels
+              like {{ weather.main.feels_like }}°C)
+            </p>
+            <p><strong>Humidity:</strong> {{ weather.main.humidity }}%</p>
+            <p>
+              <strong>Wind:</strong> {{ weather.wind.speed }} m/s, Gusts: {{
+              weather.wind.gust }} m/s
+            </p>
+            <p><strong>Pressure:</strong> {{ weather.main.pressure }} hPa</p>
+            <p><strong>Cloudiness:</strong> {{ weather.clouds.all }}%</p>
+          </div>
         </div>
       </div>
-    </div>
-    {% elif error %}
-    <div class="error">
-      <h2>The given city is incorrect.</h2>
-    </div>
-    {% endif %}
+      {% elif error %}
+      <div class="error">
+        <h2>The given city is incorrect.</h2>
+      </div>
+      {% endif %}
 
-    <form action="/">
-    <button type="submit" id="sbutton2">Search again?</button>
-</form>
-
-</div>
+      <form action="/">
+        <button type="submit" id="sbutton2">Search again?</button>
+      </form>
+    </div>
   </body>
 </html>

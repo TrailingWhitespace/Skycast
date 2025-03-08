@@ -107,12 +107,10 @@ body {
   font-size: 80px;
   color: #fff;
   text-align: center;
- 
+
   animation: glow;
   text-shadow: 0 0 5px #fff;
-  
 }
-
 
 .weather-container {
   max-width: 500px;
@@ -126,7 +124,6 @@ body {
 .weather-container h1 {
   font-family: "intertight";
 }
-
 
 .weather-box {
   display: flex;
@@ -154,10 +151,9 @@ body {
   align-items: center;
   padding-top: 100px;
   flex-direction: column;
-
 }
 
-.error{
+.error {
   display: flex;
   justify-content: center;
   align-items: center;

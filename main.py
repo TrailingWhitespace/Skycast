@@ -11,9 +11,8 @@ def home():
 @app.route("/weather", methods = ["POST"])
 def weather():
     if request.method == "POST":
-
         with open("api_key.txt", "r") as file:
-            api_key = file.read()
+            api_key = file.read().strip()
 
         city = request.form.get("query")
         
@@ -25,13 +24,9 @@ def weather():
         }
         resp = requests.get(base_url, params=params)
         if resp.status_code == 200:
-            print(resp.json())
             return render_template("weather.html", weather = resp.json())
         else:
             return render_template("weather.html", error = resp.text)
 
-
-
-
 if __name__ == '__main__':
-    app.run(debug=True, port = 8000)
+    app.run(debug = True, host='0.0.0.0', port=8000)
